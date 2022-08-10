@@ -1,5 +1,5 @@
-import React, { useRef } from 'react'
-import { useRef, useState, useEffect } from 'react';
+
+import React, { useRef, useState, useEffect } from 'react';
 import { faCheck, faTimeline, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -70,6 +70,13 @@ const Register = () => {
                 onFocus={() => setUserFocus(true)}
                 onBlur={() => setUserFocus(false)}
             />
+
+            <p id="uidnote" className={userFocus && user && !validName ? "instructions" : "offscreen"}>
+                <FontAwesomeIcon icon={faInfoCircle} />
+                4 to 24 characters.<br />
+                Must begin with a letter.<br />
+                Letters, numbers, underscores, hyphens allowed.
+            </p>
         </form>
     </section>
   )
