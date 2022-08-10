@@ -46,10 +46,14 @@ const Register = () => {
     setValidMatch(match);
   }, [pwd, matchPwd])
 
+  useEffect(() => {
+    setErrMsg('');
+  }, [user, pwd, matchPwd])
+
   return (
-    <div>
-        Register
-    </div>
+    <section>
+        <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
+    </section>
   )
 }
 
