@@ -59,13 +59,13 @@ textarea {
   border-radius: 0.5rems;
 }
 
+label {
+  text-align: left;
+}
+
 label,
 button {
   margin-top: 1rem;
-}
-
-label {
-  align-items: left;
 }
 
 button {
